@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.sipingsoft.dao.IUserDao"> 
+ 
+    <resultMap type="User" id="UserResultMap">
+        <id property="id" column="ID"/>
+        <result property="name" column="NAME"/>
+        <result property="age" column="AGE"/>
+        <result property="email" column="EMAIL"/>
+    </resultMap>
+    
+    <!-- 查询用户，根据id -->
+    <select id="getUser" parameterType="Integer" resultType="User">
+        <![CDATA[
+            SELECT * from user WHERE id = #{id}
+        ]]>
+    </select>
+    <select id="searchPage" parameterType="java.util.Map" resultType="User">
+        <![CDATA[
+            SELECT * from user WHERE NAME = #{name}
+        ]]>
+    </select>
+    <!-- 查询用户列表 -->
+    <select id="getAllUser" resultType="User">
+        <![CDATA[
+            SELECT * from user
+        ]]>  
+    </select>  
+    
+    <!-- 插入用户 -->  
+    <insert id="insertUser" parameterType="User">
+    <![CDATA[
+            INSERT INTO user (ID,
+            NAME,
+            AGE,
+            EMAIL)
+                  VALUES (#{id},
+                          #{name},
+                          #{age},
+                          #{email})
+                          ]]>
+    </insert>
+    
+    <!-- 更新用户信息 -->
+    <update id="updateUser" parameterType="User">
+    <![CDATA[
+        UPDATE user
+            SET user.NAME = #{name},
+                user.AGE = #{age},
+                user.EMAIL = #{email}
+         WHERE user.ID = #{id}
+         ]]>
+    </update>
+    
+    <!-- 删除用户 -->
+    <delete id="deleteUser" parameterType="User">
+    <![CDATA[
+            DELETE FROM user WHERE ID = #{id}
+            ]]>
+    </delete>    
+</mapper>
