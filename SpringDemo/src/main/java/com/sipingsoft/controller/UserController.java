@@ -22,35 +22,35 @@ import com.sipingsoft.service.IUserService;
 public class UserController {
     @Autowired
     private IUserService userService;
-    
+
     public void setUserService(IUserService userService) {
         this.userService = userService;
     }
-    
+
     @RequestMapping("/addUser")
     public String addUser(User user) {
         System.out.println(user.getName());
         userService.addUser(user);
         return "redirect:/getAllUser";
     }
+
     @RequestMapping("/deleteUser")
     public String deleteUser(int id) {
         if (userService.deleteUser(id)) {
             return "success";
-        } 
-        else {
+        } else {
             return "error";
         }
     }
-    
+
     @RequestMapping("/getAllUser")
     public String getAllUser(HttpServletRequest request) {
         List<User> user = userService.getAll();
         request.setAttribute("user", user);
         return "userManager";
-        
+
     }
-    
+
     @RequestMapping("/getUser")
     public String getUser(int id, HttpServletRequest request) {
         System.out.println(id);
@@ -64,36 +64,32 @@ public class UserController {
         request.setAttribute("user", user);
         return "editUser";
     }
-    
+
     @RequestMapping("/updateUser")
     public String updateUser(User user, HttpServletRequest request) {
         System.out.println("updateUser");
-        
-        if(userService.updateUser(user)) {
+
+        if (userService.updateUser(user)) {
             System.out.println("success");
-            List<User> user1= userService.getAll();
+            List<User> user1 = userService.getAll();
             request.setAttribute("user", user1);
             return "redirect:/getAllUser";
-        }
-        else {
+        } else {
             return "error";
         }
     }
-    
+
     @RequestMapping("/search")
-    public String search(
-        @RequestParam(required = false, defaultValue = "1") int pageNo,
-        @RequestParam(required = false, defaultValue = "5") int pageSize,
-        @ModelAttribute("name") String name,
-        Model model) {
-        // 这里是“信使”诞生之地，一出生就加载了很多重要信息！  
+    public String search(@RequestParam(required = false, defaultValue = "1") int pageNo, @RequestParam(required = false, defaultValue = "5") int pageSize, @ModelAttribute("name") String name,
+                         Model model) {
+        // 这里是“信使”诞生之地，一出生就加载了很多重要信息！
         Page page = Page.newBuilder(pageNo, pageSize, "users");
-        page.getParams().put("name", name);           //这里再保存查询条件  
-        model.addAttribute("users",userService.searchPage(name, page));
-        model.addAttribute("page", page);             //这里将page返回前台  
+        page.getParams().put("name", name); // 这里再保存查询条件
+        model.addAttribute("users", userService.searchPage(name, page));
+        model.addAttribute("page", page); // 这里将page返回前台
         return "page";
     }
-    
+
     @RequestMapping("/login")
     public String login(Admin admin) {
         return "success";
