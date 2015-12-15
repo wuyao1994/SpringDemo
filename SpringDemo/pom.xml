@@ -303,7 +303,10 @@
 <!--                         <port>8080</port> -->
 <!--                         <path>/</path> -->
 <!--                         <uriEncoding>UTF-8</uriEncoding> -->
-                        <url>http://localhost:8080/manager/text</url>  
+                        <url>http://localhost:8080/manager/text</url>
+                        <server>tomcat</server>
+                        <username>admin</username>
+                        <password>admin</password>  
                     </configuration>
                 </plugin>
                 <plugin>
