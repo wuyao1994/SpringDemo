@@ -7,6 +7,7 @@
 <title>登录 </title>
 </head>
 <body>
+test1
     <form action="/j_spring_security_check" method="post">
     <h2>Login</h2>
     Username:<input id="j_username" type="text" name="j_username"></br><br>
