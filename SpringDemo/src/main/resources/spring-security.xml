@@ -7,7 +7,7 @@
     <security:http auto-config="true" use-expressions="true" access-denied-page="/denied.jsp" >  
           
         <!-- 对登录页面，所有的用户都可以访问 -->       
-        <security:intercept-url pattern="/login.jsp"  access="permitAll" />  
+        <security:intercept-url pattern="/login"  access="permitAll" />  
         
         <!-- 对所有的资源，都必须要有ROLE_ADMIN角色的用户 才可以访问 -->  
         <security:intercept-url pattern="/*"  access="hasRole('ROLE_ADMIN')" />  

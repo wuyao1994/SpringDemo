@@ -92,6 +92,6 @@ public class UserController {
 
     @RequestMapping("/login")
     public String login(Admin admin) {
-        return "success";
+        return "login";
     }
 }
