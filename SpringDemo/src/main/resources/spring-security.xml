@@ -12,7 +12,7 @@
         <!-- 对所有的资源，都必须要有ROLE_ADMIN角色的用户 才可以访问 -->  
         <security:intercept-url pattern="/*"  access="hasRole('ROLE_ADMIN')" />  
         
-        <security:form-login login-page="/login.jsp" default-target-url="/getAllUser" authentication-failure-url="/error.jsp" />  
+        <security:form-login login-page="/login" default-target-url="/getAllUser" authentication-failure-url="/error.jsp" />  
     </security:http>
     
     <!-- 指定一个自定义的authentication-manager :customUserDetailsService -->  
