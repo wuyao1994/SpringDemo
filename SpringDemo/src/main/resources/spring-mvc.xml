@@ -19,7 +19,7 @@
     <mvc:annotation-driven/>
     <!-- view层返回处理，如controller中返回'error' 经过处理就是返回/error.jsp -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/"></property>
+        <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
     

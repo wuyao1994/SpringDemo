@@ -8,9 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.sipingsoft.page.Page;
 import com.sipingsoft.pojo.Admin;
@@ -58,7 +59,6 @@ public class UserController {
         try {
             user.getId();
         } catch (NullPointerException e) {
-            // TODO: handle exception
             return "error";
         }
         request.setAttribute("user", user);
@@ -93,5 +93,10 @@ public class UserController {
     @RequestMapping("/login")
     public String login(Admin admin) {
         return "login";
+    }
+    
+    @RequestMapping("/error")
+    public String error() {
+        return "error";
     }
 }

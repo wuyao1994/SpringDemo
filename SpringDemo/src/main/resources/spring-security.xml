@@ -4,7 +4,7 @@
         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
       
     <!--  Spring-Security 的配置 -->  
-    <security:http auto-config="true" use-expressions="true" access-denied-page="/denied.jsp" >  
+    <security:http auto-config="true" use-expressions="true" access-denied-page="/denied" >  
           
         <!-- 对登录页面，所有的用户都可以访问 -->       
         <security:intercept-url pattern="/login"  access="permitAll" />  
@@ -12,7 +12,7 @@
         <!-- 对所有的资源，都必须要有ROLE_ADMIN角色的用户 才可以访问 -->  
         <security:intercept-url pattern="/*"  access="hasRole('ROLE_ADMIN')" />  
         
-        <security:form-login login-page="/login" default-target-url="/getAllUser" authentication-failure-url="/error.jsp" />  
+        <security:form-login login-page="/login" default-target-url="/getAllUser" authentication-failure-url="/error" />  
     </security:http>
     
     <!-- 指定一个自定义的authentication-manager :customUserDetailsService -->  
