@@ -8,11 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.sipingsoft.page.Page;
 import com.sipingsoft.pojo.Admin;
 import com.sipingsoft.pojo.User;
@@ -23,10 +20,6 @@ import com.sipingsoft.service.IUserService;
 public class UserController {
     @Autowired
     private IUserService userService;
-
-    public void setUserService(IUserService userService) {
-        this.userService = userService;
-    }
 
     @RequestMapping("/addUser")
     public String addUser(User user) {
@@ -94,9 +87,13 @@ public class UserController {
     public String login(Admin admin) {
         return "login";
     }
-    
+    @RequestMapping("/addUser1") 
+    public String addUser() {
+        return "addUser";
+    }
     @RequestMapping("/error")
     public String error() {
         return "error";
     }
+
 }

@@ -4,12 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>编辑</title>
+<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <form name="userForm" action="/updateUser" method="post">
     <input type="hidden" name="id" value="${user.id }">
-    <table border="1" width="50%" align="center">
+    <table border="1" width="50%" align="center" class="table">
         <tr>
             <td>姓名:</td>
             <td>
@@ -31,7 +34,7 @@
         <tr>
             <td></td>
             <td>
-                <input type="submit" value="修改">
+                <input type="submit" value="修改" class="btn btn-default">
             </td>
         </tr>
     </table>

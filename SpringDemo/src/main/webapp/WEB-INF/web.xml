@@ -47,7 +47,7 @@ version="3.1">
     </context-param>
     <!-- Spring MVC servlet -->
     <servlet>  
-        <servlet-name>SpringMVC</servlet-name>  
+        <servlet-name>SpringDemo</servlet-name>  
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
         <init-param>  
             <param-name>contextConfigLocation</param-name>  
@@ -57,7 +57,7 @@ version="3.1">
         <async-supported>true</async-supported>  
     </servlet>  
     <servlet-mapping>  
-        <servlet-name>SpringMVC</servlet-name>  
+        <servlet-name>SpringDemo</servlet-name>  
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     <!-- **************************** -->

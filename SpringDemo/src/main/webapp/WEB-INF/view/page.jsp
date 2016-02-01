@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false" %>
-
+<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     function pageClick(pNo, name) {
         document.getElementById("search").action="/search"+"?pageNo="+pNo;
@@ -12,7 +14,7 @@
 
 <head>
     <body>
-        <table  border="1" width="50%" align="center">
+        <table  border="1" width="50%" align="center" class="table">
             <tr align="center">
                 <th>Id</th>
                 <th>姓名</th>
@@ -42,10 +44,10 @@
                     <label style="font-size: 10px; width: 20px; text-align: center;">•••</label>  
                   </c:when>  
                   <c:when test="${pNo != page.pageNo}">  
-                    <button onclick="pageClick(${pNo})">${pNo}</button>
+                    <button onclick="pageClick(${pNo})" class="btn btn-default">${pNo}</button>
                   </c:when>  
                   <c:otherwise>  
-                    <button style="font-weight:bold;">${pNo}</button>  
+                    <button style="font-weight:bold;" class="btn btn-default">${pNo}</button>  
                   </c:otherwise>  
                 </c:choose>  
                 </c:forTokens>  

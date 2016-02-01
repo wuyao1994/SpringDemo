@@ -1,16 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录</title>
+<!-- <link href="/resources/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- <script src="/resources/script/jquery-1.7.2.min.js"></script> -->
+<!-- <script src="/resources/script/bootstrap.min.js"></script> -->
+<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <form action="/j_spring_security_check" method="post">
-        <h2>Login</h2>
-        Username:<input id="j_username" type="text" name="j_username"></br>
-        <br> Password:<input id="j_password" type="password" name="j_password"></br>
-        </br> <input type="submit" value="登录">
+<body background="/resources/image/icon1.jpg">
+    <form class="form-horizontal" action="/j_spring_security_check" method="post" style="position: relative; left: 27%; top: 100px;">
+        <div class="form-group">
+            <label for="inputUsername3" class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-10">
+                <input name="j_username" type="Username" class="form-control" id="inputUsername3" placeholder="Username" style="width:15%">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+                <input name="j_password" type="password" class="form-control" id="inputPassword3" placeholder="Password" style="width:15%">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
     </form>
 </body>
 </html>
