@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<script src="/resources/script/jquery-1.7.2.min.js"></script>
+<script src="/resources/script/bootstrap.min.js"></script>
 <title>添加用户</title>
 <script type="text/javascript">
     function addUser() {

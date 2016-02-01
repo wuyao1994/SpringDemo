@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>首页</title>
-<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<script src="/resources/script/jquery-1.7.2.min.js"></script>
+<script src="/resources/script/bootstrap.min.js"></script>
 </head>
 <body>
     <a href="/addUser1" class="btn btn-default" style="position: relative; top: 10px">添加用户</a><br><br>
