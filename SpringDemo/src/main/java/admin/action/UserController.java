@@ -8,9 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import admin.bean.Page;
+import org.springframework.web.servlet.ModelAndView;
+
+import web.util.RequestSessionUtil;
+
+import web.bean.Page;
 import admin.bean.Admin;
 import admin.bean.User;
 import admin.service.IUserService;
@@ -20,6 +26,18 @@ import admin.service.IUserService;
 public class UserController {
     @Autowired
     private IUserService userService;
+
+    /**
+     * 页面跳转，将参数传递到页面解析
+     * @param request
+     * @param pageName
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/{pageName}", method = RequestMethod.GET)
+    public ModelAndView viewAdminManagePages(HttpServletRequest request, @PathVariable("pageName") String pageName) throws Exception {
+        return new ModelAndView("/admin/manage/" + pageName, RequestSessionUtil.getRequestParamData(request));
+    }
 
     @RequestMapping("/addUser")
     public String addUser(User user) {
@@ -87,10 +105,12 @@ public class UserController {
     public String login(Admin admin) {
         return "login";
     }
-    @RequestMapping("/addUser1") 
+
+    @RequestMapping("/addUser1")
     public String addUser() {
         return "addUser";
     }
+
     @RequestMapping("/error")
     public String error() {
         return "error";

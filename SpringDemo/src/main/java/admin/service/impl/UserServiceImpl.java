@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Maps;
 import admin.dao.IUserDao;
-import admin.bean.Page;
+import web.bean.Page;
 import admin.bean.Admin;
 import admin.bean.User;
 import admin.service.IUserService;

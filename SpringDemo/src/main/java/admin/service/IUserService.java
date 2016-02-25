@@ -2,7 +2,7 @@ package admin.service;
 
 import java.util.List;
 
-import admin.bean.Page;
+import web.bean.Page;
 import admin.bean.Admin;
 import admin.bean.User;
 
