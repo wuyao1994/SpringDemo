@@ -2,11 +2,11 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
 <configuration>
     <typeAliases>
-        <typeAlias type="com.sipingsoft.pojo.User" alias="User"/>
-        <typeAlias type="com.sipingsoft.pojo.Admin" alias="Admin"/>
+        <typeAlias type="com.sipingsoft.admin.bean.User" alias="User"/>
+        <typeAlias type="com.sipingsoft.admin.bean.Admin" alias="Admin"/>
     </typeAliases>
     <!-- <property name="pageSqlId" value=".*Page$" /> -->
     <plugins>  
-        <plugin interceptor="com.sipingsoft.Interceptor.PageInterceptor"></plugin>  
+        <plugin interceptor="com.sipingsoft.web.Interceptor.PageInterceptor"></plugin>  
     </plugins> 
 </configuration>

@@ -10,7 +10,7 @@
 <script src="/resources/script/bootstrap.min.js"></script>
 </head>
 <body>
-<form name="userForm" action="/updateUser" method="post">
+<form name="userForm" action="/admin/updateUser" method="post">
     <input type="hidden" name="id" value="${user.id }">
     <table border="1" width="50%" align="center" class="table">
         <tr>

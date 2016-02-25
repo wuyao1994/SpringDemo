@@ -4,15 +4,15 @@
         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
       
     <!--  Spring-Security 的配置 -->  
-    <security:http auto-config="true" use-expressions="true" access-denied-page="/denied" >  
+    <security:http auto-config="true" use-expressions="true" access-denied-page="/admin/denied" >  
           
         <!-- 对登录页面，所有的用户都可以访问 -->       
-        <security:intercept-url pattern="/login"  access="permitAll" />  
+        <security:intercept-url pattern="/admin/login"  access="permitAll" />  
         
         <!-- 对所有的资源，都必须要有ROLE_ADMIN角色的用户 才可以访问 -->  
         <security:intercept-url pattern="/*"  access="hasRole('ROLE_ADMIN')" />  
         
-        <security:form-login login-page="/login" default-target-url="/getAllUser" authentication-failure-url="/error" />  
+        <security:form-login login-page="/admin/login" default-target-url="/admin/getAllUser" authentication-failure-url="/admin/error" />  
     </security:http>
     
     <!-- 指定一个自定义的authentication-manager :customUserDetailsService -->  
@@ -25,5 +25,5 @@
                 通过 customUserDetailsService,Spring会自动的用户的访问级别.  
                 也可以理解成:以后我们和数据库操作就是通过customUserDetailsService来进行关联.  
      -->
-    <bean id="customUserDetailsService" class="com.sipingsoft.service.CustomUserDetailsService"/>  
+    <bean id="customUserDetailsService" class="com.sipingsoft.admin.service.CustomUserDetailsService"/>  
 </beans>

@@ -1,10 +1,10 @@
-package com.sipingsoft.dao;
+package com.sipingsoft.admin.dao;
 
 import java.util.List;
 import java.util.Map;
 
-import com.sipingsoft.pojo.Admin;
-import com.sipingsoft.pojo.User;
+import com.sipingsoft.admin.bean.Admin;
+import com.sipingsoft.admin.bean.User;
 
 public interface IUserDao {
     public User getUser(int id);

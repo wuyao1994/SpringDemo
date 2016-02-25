@@ -1,4 +1,4 @@
-package com.sipingsoft.controller;
+package com.sipingsoft.admin.action;
 
 import java.util.List;
 
@@ -10,13 +10,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.sipingsoft.page.Page;
-import com.sipingsoft.pojo.Admin;
-import com.sipingsoft.pojo.User;
-import com.sipingsoft.service.IUserService;
+import com.sipingsoft.admin.bean.Page;
+import com.sipingsoft.admin.bean.Admin;
+import com.sipingsoft.admin.bean.User;
+import com.sipingsoft.admin.service.IUserService;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/admin")
 public class UserController {
     @Autowired
     private IUserService userService;
@@ -25,7 +25,7 @@ public class UserController {
     public String addUser(User user) {
         System.out.println(user.getName());
         userService.addUser(user);
-        return "redirect:/getAllUser";
+        return "redirect:/admin/getAllUser";
     }
 
     @RequestMapping("/deleteUser")
@@ -66,7 +66,7 @@ public class UserController {
             System.out.println("success");
             List<User> user1 = userService.getAll();
             request.setAttribute("user", user1);
-            return "redirect:/getAllUser";
+            return "redirect:/admin/getAllUser";
         } else {
             return "error";
         }

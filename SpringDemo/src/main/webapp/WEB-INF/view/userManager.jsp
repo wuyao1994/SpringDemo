@@ -10,7 +10,7 @@
 <script src="/resources/script/bootstrap.min.js"></script>
 </head>
 <body>
-    <a href="/addUser1" class="btn btn-default" style="position: relative; top: 10px">添加用户</a><br><br>
+    <a href="/admin/addUser1" class="btn btn-default" style="position: relative; top: 10px">添加用户</a><br><br>
     <table border="1" width="50%" align="center" class="table table-hover">
         <tr align="center">
             <th>Id</th>
@@ -27,13 +27,13 @@
                     <td>${u.name}</td>
                     <td>${u.age }</td>
                     <td>${u.email }</td>
-                    <td><a href="/deleteUser?id=${u.id }">删除</a></td>
-                    <td><a href="/getUser?id=${u.id }">编辑</a></td>
+                    <td><a href="/admin/deleteUser?id=${u.id }">删除</a></td>
+                    <td><a href="/admin/getUser?id=${u.id }">编辑</a></td>
                 </tr>
             </c:forEach>
         </c:if>
     </table>
-    <form class="form-inline" action="/search" method="post" name="search" style="position: relative; left: 5%">
+    <form class="form-inline" action="/admin/search" method="post" name="search" style="position: relative; left: 5%">
         <div class="form-group">
             <label for="name">Name</label> <input type="text" class="form-control" id="name" name="name" placeholder="吴瑶">
         </div>

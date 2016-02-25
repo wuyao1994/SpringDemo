@@ -1,4 +1,4 @@
-package com.sipingsoft.Interceptor;
+package com.sipingsoft.web.Interceptor;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,7 +22,7 @@ import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 
-import com.sipingsoft.page.Page;
+import com.sipingsoft.admin.bean.Page;
 
 @Intercepts({@Signature(type=Executor.class,method="query",args={ MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class })})  
 public class PageInterceptor implements Interceptor{  

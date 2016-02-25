@@ -1,4 +1,4 @@
-package com.sipingsoft.service;
+package com.sipingsoft.admin.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,8 +15,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.sipingsoft.dao.IUserDao;
-import com.sipingsoft.pojo.Admin;
+import com.sipingsoft.admin.bean.Admin;
+import com.sipingsoft.admin.dao.IUserDao;
 
 /** 
  * 一个自定义的service用来和数据库进行操作. 即以后我们要通过数据库保存权限.则需要我们继承UserDetailsService 
@@ -45,7 +45,6 @@ public class CustomUserDetailsService implements UserDetailsService {
                     .toLowerCase(), true, true, true, true,  
                     getAuthorities(admin.getAccess()));
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }  
   

@@ -1,4 +1,4 @@
-package com.sipingsoft.pojo;
+package com.sipingsoft.admin.bean;
 
 public class Admin {
     private int id;

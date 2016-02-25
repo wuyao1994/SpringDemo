@@ -1,4 +1,4 @@
-package com.sipingsoft.service.impl;
+package com.sipingsoft.admin.service.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Maps;
-import com.sipingsoft.dao.IUserDao;
-import com.sipingsoft.page.Page;
-import com.sipingsoft.pojo.Admin;
-import com.sipingsoft.pojo.User;
-import com.sipingsoft.service.IUserService;
+import com.sipingsoft.admin.dao.IUserDao;
+import com.sipingsoft.admin.bean.Page;
+import com.sipingsoft.admin.bean.Admin;
+import com.sipingsoft.admin.bean.User;
+import com.sipingsoft.admin.service.IUserService;
 
 @Service
 public class UserServiceImpl implements IUserService{

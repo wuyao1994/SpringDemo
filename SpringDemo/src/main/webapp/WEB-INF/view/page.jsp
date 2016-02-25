@@ -7,7 +7,7 @@
 <script src="/resources/script/bootstrap.min.js"></script>
 <script type="text/javascript">
     function pageClick(pNo, name) {
-        document.getElementById("search").action="/search"+"?pageNo="+pNo;
+        document.getElementById("search").action="/admin/search"+"?pageNo="+pNo;
         document.getElementById("search").submit();
     }
 </script>

@@ -10,7 +10,7 @@
 <script type="text/javascript">
     function addUser() {
         var form = document.forms[0];
-        form.action = "/addUser";
+        form.action = "/admin/addUser";
         form.method = "post";
         form.submit();
     }

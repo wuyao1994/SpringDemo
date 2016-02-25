@@ -1,4 +1,4 @@
-package com.sipingsoft.pojo;
+package com.sipingsoft.admin.bean;
 
 import java.io.Serializable;
 
