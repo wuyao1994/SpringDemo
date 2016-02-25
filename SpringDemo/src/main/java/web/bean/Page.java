@@ -1,4 +1,4 @@
-package admin.bean;
+package web.bean;
 
 import java.util.List;
 import java.util.Map;
