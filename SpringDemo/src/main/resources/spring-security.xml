@@ -25,5 +25,5 @@
                 通过 customUserDetailsService,Spring会自动的用户的访问级别.  
                 也可以理解成:以后我们和数据库操作就是通过customUserDetailsService来进行关联.  
      -->
-    <bean id="customUserDetailsService" class="com.sipingsoft.admin.service.CustomUserDetailsService"/>  
+    <bean id="customUserDetailsService" class="admin.service.CustomUserDetailsService"/>  
 </beans>

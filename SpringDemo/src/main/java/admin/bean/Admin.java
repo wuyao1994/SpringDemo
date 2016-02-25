@@ -1,4 +1,4 @@
-package com.sipingsoft.admin.bean;
+package admin.bean;
 
 public class Admin {
     private int id;

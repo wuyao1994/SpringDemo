@@ -1,10 +1,10 @@
-package com.sipingsoft.admin.service;
+package admin.service;
 
 import java.util.List;
 
-import com.sipingsoft.admin.bean.Page;
-import com.sipingsoft.admin.bean.Admin;
-import com.sipingsoft.admin.bean.User;
+import admin.bean.Page;
+import admin.bean.Admin;
+import admin.bean.User;
 
 public interface IUserService {
     public void addUser(User user);

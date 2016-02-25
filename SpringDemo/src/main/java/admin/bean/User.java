@@ -1,4 +1,4 @@
-package com.sipingsoft.admin.bean;
+package admin.bean;
 
 import java.io.Serializable;
 

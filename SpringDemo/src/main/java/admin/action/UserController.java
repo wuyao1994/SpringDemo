@@ -1,4 +1,4 @@
-package com.sipingsoft.admin.action;
+package admin.action;
 
 import java.util.List;
 
@@ -10,10 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.sipingsoft.admin.bean.Page;
-import com.sipingsoft.admin.bean.Admin;
-import com.sipingsoft.admin.bean.User;
-import com.sipingsoft.admin.service.IUserService;
+import admin.bean.Page;
+import admin.bean.Admin;
+import admin.bean.User;
+import admin.service.IUserService;
 
 @Controller
 @RequestMapping("/admin")
